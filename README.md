@@ -1,4 +1,4 @@
-# Metagen_PUJ: Shotgun Metagenomics Pipeline for Oral Samples
+# Metagen: Shotgun Metagenomics Pipeline for Oral Samples
 
 
 **Author Pipeline:** Fabian Tobar-Tosse  
