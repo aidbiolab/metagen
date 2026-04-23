@@ -56,3 +56,39 @@ metagen_puj/
 ├── pipeline_meta.py              # Main pipeline script
 ├── README.md
 └── environment.yml               # (optional) Conda environment
+```
+## Requirements
+- Linux server (tested on 32 cores, 120 GB RAM)
+- Conda / Mamba
+
+### Create the environment:
+
+```bash
+mamba env create -f environment.yml
+conda activate metagen-qc
+```
+### Or manually:
+```bash
+mamba create -n metagen-qc -c conda-forge -c bioconda \
+  fastp fastqc multiqc pigz kraken2 bracken krona pandas scikit-bio matplotlib seaborn -y
+```
+### Usage
+1. Place your raw FASTQ files in ./data/MetsNCBI/
+2. Download and extract the Kraken2 database into ./data/kraken/k2_standard_20260226/
+3. Edit pipeline_meta.py to uncomment the steps you want to run
+4. Execute:
+```bash
+conda activate metagen-qc
+python3 pipeline_meta.py
+```
+### Main Outputs
+- outputs/bracken/merged_rel_abund.csv → Merged abundance table
+- outputs/diversity/alpha_diversity_counts.csv
+- outputs/diversity/pcoa_braycurtis.csv
+- outputs/krona/*.krona.html → Interactive Krona charts
+### Citation
+If you use this pipeline in your research, please cite:
+- Erira A, et al. (2026). Bacterial metagenome in plaque, saliva, and tumor samples from individuals with and without oral squamous cell carcinoma. GigaByte (in preparation).
+- GitHub repository: https://github.com/aidbiolab/metagen
+### License
+This project is licensed under the MIT License — feel free to use and modify it.
