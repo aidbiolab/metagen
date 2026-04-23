@@ -1,5 +1,6 @@
-# Metagen: Shotgun Metagenomics Pipeline for Oral Samples
-
+# Metagen
+A Bioinformatics Pipeline for Metagenome Analysis of Oral Microbiomes
+---
 
 **Author Pipeline:** Fabian Tobar-Tosse  
 **Institution:** Pontificia Universidad Javeriana Cali, and Aidbio (Bioinformatics and Data Science Solutions)  
